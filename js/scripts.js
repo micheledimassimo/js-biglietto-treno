@@ -17,7 +17,7 @@ console.log('Prezzo:', price);
 //va applicato uno sconto del 20% per i minorenni
 
 if (age < 18) {
-    price = (price * 0.2).toFixed(2);
+    price = (price - (price * 0.2)).toFixed(2);
     console.log('Prezzo con 20% sconto: €', price);
     document.getElementById('ticket-price').innerHTML = price;
 }
@@ -30,7 +30,7 @@ if (age >= 18 && age < 65) {
 }
 
 if (age >= 65) {
-    price = (price * 0.4).toFixed(2);
+    price = (price - (price * 0.4)).toFixed(2);
     console.log('Prezzo con 40% sconto: €', price);
     document.getElementById('ticket-price').innerHTML = price;
 }
